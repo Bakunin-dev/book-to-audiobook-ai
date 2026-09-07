@@ -1,4 +1,4 @@
-"""Run the offline Potter Code Showcase."""
+"""Run the offline Book-to-Audiobook AI Showcase."""
 
 from __future__ import annotations
 
@@ -15,7 +15,7 @@ from aitran.showcase.pipeline import run_showcase
 
 
 def _print_summary(summary) -> None:
-    print("Potter Code Showcase · synthetic offline execution")
+    print("Book-to-Audiobook AI Showcase · synthetic offline execution")
     for event in summary.events:
         print(f"[{event.action.upper():9}] {event.stage.value:10} · {event.detail}")
     print(
@@ -27,9 +27,9 @@ def _print_summary(summary) -> None:
 
 
 def _tour() -> int:
-    with tempfile.TemporaryDirectory(prefix="potter-showcase-") as name:
+    with tempfile.TemporaryDirectory(prefix="book-audio-showcase-") as name:
         workspace = Path(name)
-        print("Potter Code Showcase · interruption and resume tour")
+        print("Book-to-Audiobook AI Showcase · interruption and resume tour")
         try:
             run_showcase(workspace, stop_after=Stage.TRANSLATE)
         except DemoInterrupted as exc:

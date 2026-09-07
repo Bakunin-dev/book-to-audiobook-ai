@@ -1,4 +1,4 @@
-"""Executable synthetic adapters for the public Potter code showcase."""
+"""Executable synthetic adapters for the public Book-to-Audiobook AI showcase."""
 
 from __future__ import annotations
 

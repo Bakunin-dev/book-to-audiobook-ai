@@ -1,6 +1,6 @@
 # Source provenance
 
-The private Potter implementation was inspected locally. Only five deterministic,
+The private Book-to-Audiobook AI implementation was inspected locally. Only five deterministic,
 provider-independent files were selected for direct publication.
 
 ## Unmodified original source

@@ -1,5 +1,5 @@
 [project]
-name = "potter-code-showcase"
+name = "book-to-audiobook-ai-showcase"
 version = "0.1.0"
 description = "Executable synthetic vertical slice of a private book-to-audiobook pipeline"
 requires-python = ">=3.11"

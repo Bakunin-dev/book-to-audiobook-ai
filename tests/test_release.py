@@ -14,7 +14,7 @@ from tools.release import audit
 class ReleaseTests(unittest.TestCase):
     def public_copy(self) -> Path:
         root = Path(__file__).resolve().parents[1]
-        temporary = tempfile.TemporaryDirectory(prefix="potter-public-test-")
+        temporary = tempfile.TemporaryDirectory(prefix="book-audio-public-test-")
         self.addCleanup(temporary.cleanup)
         target_root = Path(temporary.name)
         for name in json.loads((root / "public-files.json").read_text(encoding="utf-8")):
@@ -66,14 +66,14 @@ class ReleaseTests(unittest.TestCase):
 
     def test_invalid_public_image_is_rejected(self):
         root = self.public_copy()
-        target = root / "docs" / "assets" / "potter-cover.png"
+        target = root / "docs" / "assets" / "book-to-audiobook-cover.png"
         target.write_bytes(b"not a png")
         with self.assertRaisesRegex(ValueError, "invalid PNG header"):
             audit(root)
 
     def test_oversized_public_media_is_rejected(self):
         root = self.public_copy()
-        target = root / "docs" / "assets" / "potter-cover.png"
+        target = root / "docs" / "assets" / "book-to-audiobook-cover.png"
         target.write_bytes(target.read_bytes() + b"0" * 2_000_000)
         with self.assertRaisesRegex(ValueError, "too large"):
             audit(root)

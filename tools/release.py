@@ -177,7 +177,7 @@ def audit(root: Path = ROOT) -> list[str]:
 
 
 def build(files: list[str]) -> Path:
-    destination = ROOT / "dist" / "potter-code-showcase.zip"
+    destination = ROOT / "dist" / "book-to-audiobook-ai-showcase.zip"
     destination.parent.mkdir(exist_ok=True)
     with zipfile.ZipFile(destination, "w", zipfile.ZIP_DEFLATED) as archive:
         for name in files:

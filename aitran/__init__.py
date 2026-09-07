@@ -1,4 +1,4 @@
-"""Public Potter Showcase package.
+"""Public Book-to-Audiobook AI Showcase package.
 
 This package is intentionally independent from the private application tree.
 """

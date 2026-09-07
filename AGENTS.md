@@ -1,6 +1,6 @@
 # Scope of this public edition
 
-This directory is the synthetic Potter Code Showcase, not the private product.
+This directory is the synthetic Book-to-Audiobook AI Showcase, not the private product.
 Keep every stage executable and keep the fixture-only and synthetic boundaries
 visible. Never add credentials, provider clients, private prompts, working books,
 real speech models, desktop distribution code, or parent-directory imports.

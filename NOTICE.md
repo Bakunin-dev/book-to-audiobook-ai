@@ -1,4 +1,4 @@
-# Potter Code Showcase — publication notice
+# Book-to-Audiobook AI Showcase — publication notice
 
 Copyright © 2026 Ilya. All rights reserved.
 

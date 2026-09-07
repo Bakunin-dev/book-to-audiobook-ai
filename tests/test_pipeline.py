@@ -23,7 +23,7 @@ from aitran.showcase.pipeline import run_showcase
 
 class PipelineTests(unittest.TestCase):
     def workspace(self) -> Path:
-        temporary = tempfile.TemporaryDirectory(prefix="potter-showcase-test-")
+        temporary = tempfile.TemporaryDirectory(prefix="book-audio-showcase-test-")
         self.addCleanup(temporary.cleanup)
         return Path(temporary.name)
 
