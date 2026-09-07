@@ -96,7 +96,7 @@ class PipelineTests(unittest.TestCase):
         summary = run_showcase(workspace)
         playlist = (workspace / "audiobook.m3u8").read_text(encoding="utf-8")
         for path in summary.audio_files:
-            self.assertIn(path.relative_to(workspace).as_posix(), playlist)
+            self.assertIn(path.relative_to(summary.workspace).as_posix(), playlist)
 
 
 if __name__ == "__main__":
