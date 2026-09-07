@@ -1,0 +1,7 @@
+{
+  "aitran/artifacts.py": "bccec479a29f41cad9c1caede58de0d3e9715cd5d3531cf94c1eb18d6be1d2f5",
+  "aitran/contracts.py": "406a976783e641eba0219152bbfadb3a39f38bf60224613e49ad22f7d88c8e0c",
+  "aitran/process_lock.py": "77441a3cf960d42a23b9cdfa39b1b75923b6336b6dfbb282cf81102932aca650",
+  "aitran/speech_chunking.py": "2c8c1de94a8ab770f8273147d6fcf4ca0d19efa4a87c67b2eac084d834e661ef",
+  "aitran/speech_pronunciation.py": "c7abfee4464eb102a3ae58a7398a3411166c211b2e36bef74479de4fc7f5940d"
+}

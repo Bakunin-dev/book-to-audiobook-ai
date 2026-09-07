@@ -1,0 +1,68 @@
+{
+  "schema_version": "potter-portfolio-recording-v1",
+  "source_code_sha256": "5c9f4989de8613715e213df0fb282f03cdf3b6b4f885b8e4744ba76f964c5db8",
+  "data_kind": "included-fictional-fixture",
+  "audio_kind": "synthetic-tones-not-speech",
+  "frames": [
+    {
+      "title": "Исходник зафиксирован",
+      "command": "run_showcase(workspace, stop_after=\"import\")",
+      "lines": [
+        "Абзацев: 8",
+        "Стабильные ID: созданы",
+        "Исходный SHA-256: сохранён",
+        "Статус: paused / checkpoint written"
+      ]
+    },
+    {
+      "title": "Перевод продолжен с checkpoint",
+      "command": "run_showcase(workspace, stop_after=\"translate\")",
+      "lines": [
+        "Import: reused",
+        "Переведено абзацев: 8",
+        "Сетевых вызовов: 0",
+        "Обычный и tagged-текст: записаны"
+      ]
+    },
+    {
+      "title": "Структура проверена, роли назначены",
+      "command": "run_showcase(workspace, stop_after=\"cast\")",
+      "lines": [
+        "Структурных ошибок: 0",
+        "ID сохранены: true",
+        "Ролей: 3",
+        "Размечено строк: 8"
+      ]
+    },
+    {
+      "title": "Книга разложена на аудиосцены",
+      "command": "run_showcase(workspace, stop_after=\"audio-plan\")",
+      "lines": [
+        "Сцен: 8",
+        "Голосов: 3",
+        "Совпадений словаря произношений: 4",
+        "Рендер отделён от перевода"
+      ]
+    },
+    {
+      "title": "Аудиокнига собрана",
+      "command": "summary = run_showcase(workspace)",
+      "lines": [
+        "Глав: 2",
+        "WAV-файлов: 8 / RIFF: true",
+        "Playlist: audiobook.m3u8",
+        "Создано сейчас: 8"
+      ]
+    },
+    {
+      "title": "Повторный запуск ничего не пересоздаёт",
+      "command": "repeat = run_showcase(workspace)",
+      "lines": [
+        "Этапов reused: 6 / 6",
+        "Сцен: 8",
+        "Хэши артефактов: проверены",
+        "Сетевых вызовов за весь demo: 0"
+      ]
+    }
+  ]
+}

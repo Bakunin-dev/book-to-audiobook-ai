@@ -1,0 +1,9 @@
+[project]
+name = "potter-code-showcase"
+version = "0.1.0"
+description = "Executable synthetic vertical slice of a private book-to-audiobook pipeline"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
