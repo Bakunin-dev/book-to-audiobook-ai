@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/book-to-audiobook-cover.png" width="1440" alt="Book-to-Audiobook AI — из книги на другом языке в готовую аудиокнигу">
+  <img src="docs/assets/book-to-audiobook-cover-grid.png" width="1440" alt="Book-to-Audiobook AI — из книги на другом языке в готовую аудиокнигу">
 </p>
 
 <p align="center">

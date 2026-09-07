@@ -66,14 +66,14 @@ class ReleaseTests(unittest.TestCase):
 
     def test_invalid_public_image_is_rejected(self):
         root = self.public_copy()
-        target = root / "docs" / "assets" / "book-to-audiobook-cover.png"
+        target = root / "docs" / "assets" / "book-to-audiobook-cover-grid.png"
         target.write_bytes(b"not a png")
         with self.assertRaisesRegex(ValueError, "invalid PNG header"):
             audit(root)
 
     def test_oversized_public_media_is_rejected(self):
         root = self.public_copy()
-        target = root / "docs" / "assets" / "book-to-audiobook-cover.png"
+        target = root / "docs" / "assets" / "book-to-audiobook-cover-grid.png"
         target.write_bytes(target.read_bytes() + b"0" * 2_000_000)
         with self.assertRaisesRegex(ValueError, "too large"):
             audit(root)
