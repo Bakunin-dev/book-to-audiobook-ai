@@ -6,6 +6,7 @@ import argparse
 from dataclasses import asdict
 import json
 from pathlib import Path
+import sys
 import tempfile
 
 from aitran.errors import DemoInterrupted, ShowcaseError
@@ -76,4 +77,7 @@ def main() -> int:
 
 
 if __name__ == "__main__":
+    # Keep Russian progress messages readable in redirected Windows output too.
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
     raise SystemExit(main())

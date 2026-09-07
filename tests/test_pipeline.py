@@ -4,8 +4,11 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 from pathlib import Path
 import socket
+import subprocess
+import sys
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -97,6 +100,19 @@ class PipelineTests(unittest.TestCase):
         playlist = (workspace / "audiobook.m3u8").read_text(encoding="utf-8")
         for path in summary.audio_files:
             self.assertIn(path.relative_to(summary.workspace).as_posix(), playlist)
+
+    def test_cli_tour_uses_utf8_with_legacy_console_encoding(self):
+        script = Path(__file__).resolve().parents[1] / "demo.py"
+        result = subprocess.run(
+            [sys.executable, str(script), "--tour"],
+            env={**os.environ, "PYTHONIOENCODING": "cp1252", "PYTHONUTF8": "0"},
+            capture_output=True,
+            timeout=30,
+        )
+        self.assertEqual(result.returncode, 0, result.stderr.decode("utf-8", errors="replace"))
+        output = result.stdout.decode("utf-8")
+        self.assertIn("Демонстрация остановлена после translate", output)
+        self.assertIn("READY · chapters=2 scenes=8 audio_files=8", output)
 
 
 if __name__ == "__main__":
